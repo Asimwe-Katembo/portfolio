@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Asimwe Katembo — Computing student at Jomo Kenyatta University of Agriculture and Technology">
+  <title>Asimwe Katembo | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Asimwe Katembo</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+  </main>
+<section class="about-section">
+  <div class="container about-grid">
+
+    <aside>
+      <!-- Profile photo -->
+      <img src="images/profile.jpg"
+           alt="[Your Name] — profile photo"
+           class="profile-img">
+      <h3>Asimwe Katembo</h3>
+      <p class="role">Food science student, Year 2</p>
+    </aside>
+
+    <div>
+      <h2>About Me</h2>
+      <p>My name is Asimwe Katembo. I was born in Rwanda and grew up in Goma, Congo. I have always been passionate about cooking and science, especially mathematics and chemistry, which led me to pursue a degree in food science and technology. In the future, I aim to gain experience in the food industry and eventually start my own business producing delicious, healthy, and convenient food products.</p>
+
+      <h3>Technical Skills</h3>
+      <ul class="skills-list">
+        <li>Food analysis and laboratory techniques</li>
+        <li>Data anlysis and report writing</li>
+        <li>Basic food processing and preservation</li>
+        <!-- Add more skills -->
+      </ul>
+
+      <h3>Education</h3>
+      <table>
+        <thead>
+          <tr><th>Qualification: High school graduate and currently pursuing a Bachelor of Science in Food Science and Technology</th><th>Institution</th><th>Year</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BSc Food science and technology</td><td>Jomo Kenyatta University of Agriculture and Technology</td><td>2024–Present</td></tr>
+          <tr><td>KCSE</td><td>Saint Ursule High school</td><td>2023</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Asimwe Katembo — ICS 2215, Dept. of Computing</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

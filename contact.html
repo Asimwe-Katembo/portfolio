@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Asimwe Katembo — Computing student at Jomo Kenyatta University of Agriculture and Technology">
+  <title>Asimwe Katembo | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Asimwe KATEMBO</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+  </main>
+<section class="contact-section">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <!-- action="#" keeps the form on the same page (no backend for this lab) -->
+    <form class="contact-form" action="#" method="POST" novalidate>
+
+      <div class="form-group">
+        <label for="name">Asimwe katembo</label>
+        <input type="text" id="name" name="name"
+               placeholder="Jane Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">asimwe.rebeccah@students.jkuat.ac.ke</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">Select a subject</option>
+          <option>Collaboration</option>
+          <option>Employment Opportunity</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Asimwe Katembo — ICS 2215, Dept. of Computing</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Asimwe Katembo — Computing student at Jomo Kenyatta University OF Agriculture and technology">
+  <title>Asimwe Katembo | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Asimwe Katembo</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <!-- PAGE-SPECIFIC CONTENT GOES HERE --> 
+  </main>
+<section class="hero">
+  <div class="container">
+    <h1>Hi, I'm <span class="accent">Asimwe Katembo</span></h1>
+    <p class="tagline">Computing Student · ICS 2215 · [University Name]</p>
+    <p>Passionate about Food science, chemistry and learning new cultures through food.</p>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn">View My Projects</a>
+      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </div>
+</section>
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Asimwe Katembo — ICS 2215, Dept. of Computing</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
