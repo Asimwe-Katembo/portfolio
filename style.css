@@ -716,3 +716,42 @@ body.dark a {
     background: rgb(255, 255, 255);
   }
 }
+/* === 13. RESPONSIVE MEDIA QUERIES === */
+
+/* Tablet and above — 768px+ */
+@media (min-width: 768px) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .hero { padding: 8rem 1.5rem; }
+}
+
+/* Desktop — 1024px+ */
+@media (min-width: 1024px) {
+  .cards   { grid-template-columns: repeat(3, 1fr); }
+  .hero h1 { font-size: 4rem; }
+}
+
+/* Mobile only — collapse nav to centre-aligned column */
+@media (max-width: 599px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero  { padding: 3.5rem 1rem; }
+  .contact-form { padding: 1.5rem; }
+}
+
+/* Print — hide navigation and buttons */
+@media print {
+  header, footer, .btn, .hero-btns { display: none; }
+  body { font-size: 12pt; color: black; background: white; }
+}
