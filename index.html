@@ -6,11 +6,11 @@
   <meta charset="UTF-8">
   <!-- REQUIRED for responsive design on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Asimwe Katembo — Computing student at Jomo Kenyatta University OF Agriculture and technology">
+  <meta name="description" content="Portfolio of Asimwe Katembo — Computing student at Jomo Kenyatta University of Agriculture and Technology">
   <title>Asimwe Katembo | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light">
   <!-- Skip link: allows keyboard users to skip the nav -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
@@ -26,6 +26,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
     </div>
   </header>
   <main id="main">
@@ -34,7 +35,7 @@
 <section class="hero">
   <div class="container">
     <h1>Hi, I'm <span class="accent">Asimwe Katembo</span></h1>
-    <p class="tagline">Computing Student · ICS 2215 · [University Name]</p>
+    <p class="tagline">Computing Student · ICS 2215 · Jomo Kenyatta University of Agriculture and Technology</p>
     <p>Passionate about Food science, chemistry and learning new cultures through food.</p>
     <div class="hero-btns">
       <a href="projects.html" class="btn">View My Projects</a>
@@ -47,6 +48,6 @@
       <p>&copy; <span id="year"></span> Asimwe Katembo — ICS 2215, Dept. of Computing</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>

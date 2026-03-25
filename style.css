@@ -5,30 +5,37 @@
   padding: 0;
 }
 
-/* === 2. CSS CUSTOM PROPERTIES (Food Science Inspired Color Palette) === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === 2. CSS CUSTOM PROPERTIES (Minimalist Feminine Color Palette) === */
 :root {
-  /* Color Palette: Inspired by food science - warm oranges, fresh greens, earthy browns */
-  --clr-cream:         #FFF8E1;      /* Light cream background */
-  --clr-orange:        #FF6B35;      /* Vibrant orange for accents */
-  --clr-green:         #2E8B57;      /* Sea green for secondary */
-  --clr-brown:         #8B4513;      /* Saddle brown for text */
-  --clr-light-green:   #98FB98;      /* Pale green for highlights */
+  /* Color Palette: Very soft pink and very dark cherry red */
+  --clr-rose-dust:     #FFF0F5;      /* Very soft pink background */
+  --clr-crimson:       #4B0000;      /* Very dark cherry red for accents */
+  --clr-persian-plum:  #DC143C;      /* Medium cherry for secondary */
+  --clr-dark-sienna:   #8B0000;      /* Darker cherry for text */
+  --clr-dark:          #141414;
+  --clr-darkish:       #1F1F1F;
+  --clr-text-light:    #F4F4F4;
+  --clr-paper:         #1D1D21;
   
   /* Derived colors for consistency */
-  --clr-primary:       #8B4513;      /* Saddle brown for text */
-  --clr-accent:        #FF6B35;      /* Orange for highlights */
-  --clr-accent-light:  #FF8C69;      /* Lighter orange */
-  --clr-bg:            #FFF8E1;      /* Cream background */
+  --clr-primary:       var(--clr-dark-sienna);      /* Dark sienna for text */
+  --clr-accent:        var(--clr-crimson);          /* Crimson for highlights */
+  --clr-accent-light:  #E57373;                     /* Lighter crimson */
+  --clr-bg:            var(--clr-rose-dust);        /* Rose dust background */
   --clr-white:         #FFFFFF;
-  --clr-text:          #8B4513;
-  --clr-muted:         #A0522D;
-  --clr-border:        #F5DEB3;
+  --clr-text:          var(--clr-dark-sienna);
+  --clr-muted:         var(--clr-persian-plum);
+  --clr-border:        #E8D5C4;                      /* Soft border */
   
-  /* Design tokens */
-  --radius:            12px;
-  --radius-lg:         16px;
-  --shadow:            0 4px 15px rgba(139, 69, 19, 0.08);
-  --shadow-hover:      0 12px 30px rgba(255, 107, 53, 0.15);
+  /* Design tokens - Minimalist */
+  --radius:            8px;
+  --radius-lg:         12px;
+  --shadow:            0 2px 8px rgba(160, 82, 45, 0.1);
+  --shadow-hover:      0 4px 16px rgba(220, 20, 60, 0.15);
   --max-width:         1100px;
   
   /* Typography */
@@ -191,7 +198,7 @@ nav a.active {
 
 /* === 7. HERO SECTION === */
 .hero {
-  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-green) 100%);
+  background: linear-gradient(135deg, var(--clr-crimson) 0%, var(--clr-persian-plum) 100%);
   color: white;
   padding: 7rem 1.5rem;
   text-align: center;
@@ -199,21 +206,10 @@ nav a.active {
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .hero .container {
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .hero h1 {
@@ -345,7 +341,7 @@ nav a.active {
 
 .card-tag {
   display: inline-block;
-  background: linear-gradient(135deg, var(--clr-light-green), var(--clr-accent-light));
+  background: linear-gradient(135deg, var(--clr-rose-dust), var(--clr-persian-plum));
   color: var(--clr-primary);
   font-size: 0.7rem;
   font-weight: 700;
@@ -455,7 +451,7 @@ table {
 }
 
 table th {
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-green));
+  background: linear-gradient(135deg, var(--clr-crimson), var(--clr-persian-plum));
   color: white;
   padding: 1.1rem 1.4rem;
   text-align: left;
@@ -477,11 +473,11 @@ table tr:last-child td {
 }
 
 table tr:nth-child(even) td {
-  background: var(--clr-light-green);
+  background: var(--clr-rose-dust);
 }
 
 table tr:hover td {
-  background: var(--clr-light-green);
+  background: var(--clr-rose-dust);
   transition: background 0.2s ease;
 }
 
@@ -563,6 +559,54 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* === DARK THEME SUPPORT === */
+body.light {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+body.dark {
+  background: var(--clr-dark);
+  color: var(--clr-text-light);
+}
+
+body.dark header,
+body.dark footer {
+  background: var(--clr-darkish);
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #2B0000 0%, #1A0000 100%);
+}
+
+body.dark .logo,
+body.dark nav a,
+body.dark footer,
+body.dark .theme-toggle {
+  color: var(--clr-text-light);
+}
+
+body.dark a {
+  color: #90EE90;
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 /* === 13. RESPONSIVE MEDIA QUERIES === */
